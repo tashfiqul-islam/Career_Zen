@@ -72,4 +72,4 @@ To be updated while in development
 	4. Version Control System: Github
 	
 ## Developers:
-Md. Tashfiqul Islam | 161 1593 042 (Product Owner/Scrum Master)	
+Md. Tashfiqul Islam | 161 1593 042 (Scrum Master/Product Owner//Developer/QA Tester)
