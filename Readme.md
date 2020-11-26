@@ -19,6 +19,16 @@
 <br><br>
 ![logo](https://img.shields.io/badge/Developer-Md.%20Tashfiqul%20Islam%20|%20161%201593%20042-0636A5?style=flat-square&logo=appveyor.svg)
 
+## Stats
+
+![logo](https://img.shields.io/github/release-date-pre/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/github/v/release/dead-shot95/CSE327.8-Project?include_prereleases) <br>
+![logo](https://img.shields.io/github/last-commit/dead-shot95/CSE327.8-Project/main?color=orange)
+![logo](https://img.shields.io/github/commits-since/dead-shot95/CSE327.8-Project/v0.1.0/main?include_prereleases)
+![logo](https://img.shields.io/github/commit-activity/w/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/tokei/lines/github/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/github/repo-size/dead-shot95/CSE327.8-Project)
+
 ## Description: 
 <p>A web application that helps you learn and progress in your career.<p>
 
