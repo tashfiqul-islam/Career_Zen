@@ -66,7 +66,7 @@ Any
 <p>Should be available on all but just keeping the two.</p>
 
 ## How to use: 
-By visiting link (https://www.CareerZen.com/ - Placeholder)
+By visiting link (https://www.MyCareerZen.tech/)
 
 ## Written in:
 	1. Frontend: Javascript, html, css, bootstrap
