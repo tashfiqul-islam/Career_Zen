@@ -56,6 +56,7 @@ Web based application
 		2. Sorting based on views
 5. Book suggestions based on search query/genre
 6. Integrated Mini Games (E.g. Snake, Chess)
+7. User/Admin activity dashboard
 
 ## Operating system: 
 Any 
