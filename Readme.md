@@ -1,23 +1,35 @@
-# App name: Career Assistant
+# Career Zen
 
-![logo](https://img.shields.io/badge/Career%20Assistance-A%20site%20to%20develop%20career%20skills-blue?style=for-the-badge&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Career%20Zen-A%20site%20to%20develop%20career%20skills-blue?style=for-the-badge&logo=appveyor.svg)
 <br><br>
-![logo](https://img.shields.io/badge/Made%20with-Python-581845?style=flat&logo=appveyor.svg)
-![logo](https://img.shields.io/badge/Made%20with-PHP-581845?style=flat&logo=appveyor.svg)
-![logo](https://img.shields.io/badge/Made%20with-JavaScript-581845?style=flat&logo=appveyor.svg)
-![logo](https://img.shields.io/badge/Made%20with-MySql-581845?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Made%20with-Python-EC0F64?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Made%20with-PHP-EC0F64?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Made%20with-JavaScript-EC0F64?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Made%20with-MySql-EC0F64?style=flat&logo=appveyor.svg)
 <br>
-![logo](https://img.shields.io/badge/Uses-HTML-C70039?style=flat&logo=appveyor.svg)
-![logo](https://img.shields.io/badge/Uses-CSS-C70039?style=flat&logo=appveyor.svg)
-![logo](https://img.shields.io/badge/Uses-BootStrap-C70039?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Uses-HTML-CF0D58?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Uses-CSS-CF0D58?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Uses-BootStrap-CF0D58?style=flat&logo=appveyor.svg)
 <br>
-![logo](https://img.shields.io/badge/Database-phpmyadmin-A70C47?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Database-phpMyAdmin-B10B4B?style=flat&logo=appveyor.svg)
 <br>
-![logo](https://img.shields.io/badge/Framework-Laravel-AB0D65?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Framework-Laravel-93093F?style=flat&logo=appveyor.svg)
 <br>
-![logo](https://img.shields.io/badge/Version%20Control-GIT-B42365?style=flat&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Version%20Control-GIT-760732?style=flat&logo=appveyor.svg)
 <br><br>
-![logo](https://img.shields.io/badge/Developer-Md.%20Tashfiqul%20Islam%20|%20161%201593%20042-0636A5?style=flat-square&logo=appveyor.svg)
+![logo](https://img.shields.io/badge/Developer-Md.%20Tashfiqul%20Islam%20|%20161%201593%20042-0636A5?style=plastic&logo=appveyor.svg)
+
+## Stats
+
+![logo](https://img.shields.io/github/release-date-pre/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/github/v/release/dead-shot95/CSE327.8-Project?include_prereleases) <br>
+![logo](https://img.shields.io/github/last-commit/dead-shot95/CSE327.8-Project/main?color=orange)
+![logo](https://img.shields.io/github/commits-since/dead-shot95/CSE327.8-Project/20.11.0/main?include_prereleases)
+![logo](https://img.shields.io/github/commit-activity/w/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/tokei/lines/github/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/github/languages/code-size/dead-shot95/CSE327.8-Project)
+![logo](https://img.shields.io/github/repo-size/dead-shot95/CSE327.8-Project)
+
 
 ## Description: 
 <p>A web application that helps you learn and progress in your career.<p>
@@ -54,7 +66,7 @@ Any
 <p>Should be available on all but just keeping the two.</p>
 
 ## How to use: 
-By visiting link (https://www.CareerAssistance.com/ - Placeholder)
+By visiting link (https://www.CareerZen.com/ - Placeholder)
 
 ## Written in:
 	1. Frontend: Javascript, html, css, bootstrap
@@ -72,4 +84,4 @@ To be updated while in development
 	4. Version Control System: Github
 	
 ## Developers:
-Md. Tashfiqul Islam | 161 1593 042 (Product Owner/Scrum Master)	
+Md. Tashfiqul Islam | 161 1593 042 (Scrum Master/Product Owner//Developer/QA Tester)
