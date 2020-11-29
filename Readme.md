@@ -23,8 +23,8 @@
 
 ![logo](https://img.shields.io/github/release-date-pre/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/github/v/release/dead-shot95/CSE327.8-Project?include_prereleases) <br>
-![logo](https://img.shields.io/github/last-commit/dead-shot95/CSE327.8-Project/main?color=orange)
-![logo](https://img.shields.io/github/commits-since/dead-shot95/CSE327.8-Project/20.11.0/main?include_prereleases)
+![logo](https://img.shields.io/github/last-commit/dead-shot95/CSE327.8-Project/master)
+![logo](https://img.shields.io/github/commits-since/dead-shot95/CSE327.8-Project/20.11.0/master?include_prereleases)
 ![logo](https://img.shields.io/github/commit-activity/w/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/tokei/lines/github/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/github/languages/code-size/dead-shot95/CSE327.8-Project)
@@ -55,7 +55,7 @@ Web based application
 		1. Add/remove
 		2. Sorting based on views
 5. Book suggestions based on search query/genre
-6. Integrated Mini Games (E.g. Snake, chess)
+6. Integrated Mini Games (E.g. Snake, Chess)
 
 ## Operating system: 
 Any 
