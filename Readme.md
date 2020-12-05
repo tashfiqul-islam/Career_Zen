@@ -24,7 +24,7 @@
 ![logo](https://img.shields.io/github/release-date-pre/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/github/v/release/dead-shot95/CSE327.8-Project?include_prereleases) <br>
 ![logo](https://img.shields.io/github/last-commit/dead-shot95/CSE327.8-Project/master)
-![logo](https://img.shields.io/github/commits-since/dead-shot95/CSE327.8-Project/20.11.0/master?include_prereleases)
+![logo](https://img.shields.io/github/commits-since/dead-shot95/CSE327.8-Project/20.11.1/master)
 ![logo](https://img.shields.io/github/commit-activity/w/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/tokei/lines/github/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/github/languages/code-size/dead-shot95/CSE327.8-Project)
