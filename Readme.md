@@ -21,6 +21,7 @@
 
 ## Stats
 
+![logo](https://img.shields.io/website?down_color=lightgrey&down_message=Site%20Down&up_color=blue&up_message=Work%20In%20Progress&url=https%3A%2F%2Fmycareerzen.tech%2F)
 ![logo](https://img.shields.io/github/release-date-pre/dead-shot95/CSE327.8-Project)
 ![logo](https://img.shields.io/github/v/release/dead-shot95/CSE327.8-Project?include_prereleases) <br>
 ![logo](https://img.shields.io/github/last-commit/dead-shot95/CSE327.8-Project/master)
