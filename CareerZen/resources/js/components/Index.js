@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import "../../css/index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import LandingPage from "./LandingPage/LandingPg";
-import ReactRouter from "./LandingPage/ReactRouterSetup"
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import ReactRouter from "./LandingPage/ReactRouterSetup";
 
 function Index() {
     return (
