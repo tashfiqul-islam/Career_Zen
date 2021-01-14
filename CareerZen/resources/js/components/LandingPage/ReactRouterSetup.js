@@ -12,9 +12,6 @@ import LandingPage from "./LandingPg";
 import Navbar from "./Navbar";
 import Signup from "./Signup";
 import Error from "./Error";
-import About from "./About";
-import Desc from "./FeatureDesc";
-import Login from "./LoginForm";
 
 const ReactRouterSetup = () => {
     return (
@@ -27,15 +24,7 @@ const ReactRouterSetup = () => {
                 <Route exact path="/signup">
                     <Signup />
                 </Route>
-                {/* <Route exact path="/about">
-                    <About />
-                </Route>
-                <Route exact path="/desc">
-                    <Desc />
-                </Route>
-                <Route exact path="/login">
-                    <Login />
-                </Route> */}
+
                 <Route exact path="*">
                     <Error />
                 </Route>

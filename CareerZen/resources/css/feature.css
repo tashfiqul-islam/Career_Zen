@@ -18,13 +18,9 @@
 }
 
 img {
-    /* width: 100%; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
-
-    /* object-fit: contain;
-    align-self: flex-start; */
 }
 p {
     text-align: justify;
@@ -33,4 +29,11 @@ p {
 h1 {
     text-align: center;
     font-size: 40px;
+}
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+    .container {
+        /* flex: 50%; */
+        flex-direction: column;
+    }
 }

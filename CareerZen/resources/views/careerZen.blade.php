@@ -8,9 +8,12 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link href="/css/app.css" rel="stylesheet">
+        
+        
         
         <!-- <link href="/css/about.css" rel="stylesheet"> -->
+        <link href="/css/app.css" rel="stylesheet">
+        
 
     </head>
     <body>
@@ -37,4 +40,5 @@
         <div id="LandingBody"></div>
     </body>
     <script src="/js/app.js"></script>
+    
 </html>
