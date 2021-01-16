@@ -9,36 +9,36 @@ export const SideBarData = [
         title: "DashBoard",
         path: "/dashboard",
         icon: <AiIcons.AiFillDashboard />,
-        cName: "nav-text"
+        cName: "auth-nav-text"
     },
     {
         title: "Tasks",
         path: "/tasks",
         icon: <FaIcons.FaTasks />,
-        cName: "nav-text"
+        cName: "auth-nav-text"
     },
     {
         title: "Wikipedia",
         path: "/wikipedia",
         icon: <FaIcons.FaWikipediaW />,
-        cName: "nav-text"
+        cName: "auth-nav-text"
     },
     {
         title: "Google Books",
         path: "/books",
         icon: <IoBookcons.IoBookSharp />,
-        cName: "nav-text"
+        cName: "auth-nav-text"
     },
     {
         title: "Youtube",
         path: "/youtube",
         icon: <FaIcons.FaYoutube />,
-        cName: "nav-text"
+        cName: "auth-nav-text"
     },
     {
         title: "Game",
         path: "/game",
         icon: <IoIcons.IoLogoGameControllerB />,
-        cName: "nav-text"
+        cName: "auth-nav-text"
     }
 ];

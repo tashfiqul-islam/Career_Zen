@@ -53,89 +53,86 @@ const LoginForm = () => {
 
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/api/login",
+                // "http://127.0.0.1:8000/api/login",
+                "https://app.mycareerzen.tech/api/login",
                 user,
                 {
                     cancelToken: source.token
                 }
             );
-
-            setIsLoading(false);
-            if (
-                response.data.status === 200 &&
-                response.data.success === true
-            ) {
-                console.log(response);
-                localStorage.setItem("token", response.data.token);
-                localStorage.setItem("isLoggedIn", true);
-                localStorage.setItem(
-                    "user",
-                    JSON.stringify(response.data.user)
-                );
-                // console.log(response.data.user.id);
-                actions({
-                    type: "login",
-                    payload: {
-                        id: response.data.user.id
-                    }
-                });
-                console.log(state);
-                setUser({
-                    email: "",
-                    password: ""
-                });
-
-                setMsg(response.data.message);
-                setTimeout(() => {
-                    setMsg("");
-                }, 2000);
-
-                setRedirect(true);
-
-                // history.replace(from);
-                // console.log(history, location, from);
-                // auth.login(() => {
-                //     history.replace(from);
-                // });
-            }
-            if (
-                response.data.status === "failed" &&
-                response.data.success === undefined
-            ) {
-                setIsLoading(false);
-                setErrorMessage({
-                    errMsgEmail: response.data.validation_error.email,
-                    errMsgPwd: response.data.validation_error.password
-                });
-
-                console.log(errorMessage);
-                setTimeout(() => {
-                    setErrorMessage({
-                        errMsgEmail: "",
-                        errMsgPwd: ""
-                    });
-                }, 2000);
-            }
-
-            if (
-                response.data.status === "failed" &&
-                response.data.success === false
-            ) {
-                setIsLoading(false);
-                setErrorMessage({
-                    errMsg: response.data.message
-                });
-
-                setTimeout(() => {
-                    setErrorMessage({
-                        errMsg: ""
-                    });
-                }, 2000);
-            }
         } catch (err) {
             // Handle Error Here
             console.error(err);
+            setIsLoading(false);
             // console.log(response.data);
+            return;
+        }
+
+        setIsLoading(false);
+        if (response.data.status === 200 && response.data.success === true) {
+            console.log(response);
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("isLoggedIn", true);
+            localStorage.setItem("user", JSON.stringify(response.data.user));
+            // console.log(response.data.user.id);
+            actions({
+                type: "login",
+                payload: {
+                    id: response.data.user.id
+                }
+            });
+            console.log(state);
+            setUser({
+                email: "",
+                password: ""
+            });
+
+            setMsg(response.data.message);
+            setTimeout(() => {
+                setMsg("");
+            }, 2000);
+
+            setRedirect(true);
+
+            // history.replace(from);
+            // console.log(history, location, from);
+            // auth.login(() => {
+            //     history.replace(from);
+            // });
+        }
+        if (
+            response.data.status === "failed" &&
+            response.data.success === undefined
+        ) {
+            setIsLoading(false);
+            setErrorMessage({
+                errMsgEmail: response.data.validation_error.email,
+                errMsgPwd: response.data.validation_error.password
+            });
+
+            console.log(errorMessage);
+            setTimeout(() => {
+                setErrorMessage({
+                    errMsgEmail: "",
+                    errMsgPwd: ""
+                });
+            }, 2000);
+        }
+
+        if (
+            response.data.status === "failed" &&
+            response.data.success === false
+        ) {
+            setIsLoading(false);
+            setErrorMessage({
+                errMsg: response.data.message
+            });
+
+            setTimeout(() => {
+                setErrorMessage({
+                    errMsg: ""
+                });
+            }, 2000);
         }
     };
 
@@ -172,10 +169,16 @@ const LoginForm = () => {
                                             });
                                         }}
                                     />
-                                    <span className="text-danger">{msg}</span>
-                                    <span className="text-danger">
-                                        {errorMessage.errMsgEmail}
-                                    </span>
+                                    {msg && (
+                                        <span className="text-danger">
+                                            {msg}
+                                        </span>
+                                    )}
+                                    {errorMessage.errMsgEmail && (
+                                        <span className="text-danger">
+                                            {errorMessage.errMsgEmail}
+                                        </span>
+                                    )}
                                 </div>
 
                                 <div className="form-group">
@@ -193,9 +196,11 @@ const LoginForm = () => {
                                             });
                                         }}
                                     />
-                                    <span className="text-danger">
-                                        {errorMessage.errMsgPwd}
-                                    </span>
+                                    {errorMessage.errMsgPwd && (
+                                        <span className="text-danger">
+                                            {errorMessage.errMsgPwd}
+                                        </span>
+                                    )}
                                 </div>
 
                                 <div className="form-group">
@@ -227,11 +232,10 @@ const LoginForm = () => {
                                         HandleFormSubmit(e);
                                     }}
                                 >
-                                    Sign in
                                     {isLoading ? (
                                         <Spinner color="secondary" />
                                     ) : (
-                                        <span></span>
+                                        "Sign in"
                                     )}
                                 </button>
                                 <p className="forgot-password text-right">

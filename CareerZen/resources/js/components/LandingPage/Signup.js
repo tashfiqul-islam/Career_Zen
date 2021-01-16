@@ -33,14 +33,15 @@ const Signup = props => {
         setLoading(true);
         const data = newUser;
         console.log(data);
-
+        // https://app.mycareerzen.tech
+        // http://127.0.0.1:8000/
         axios
-            .post("http://127.0.0.1:8000/api/register", newUser)
+            .post("https://app.mycareerzen.tech/api/register", newUser)
             .then(response => {
                 setLoading(false);
                 if (response.data.status === 200) {
                     console.log(response);
-                    localStorage.setItem("token", response.data.token);
+                    // localStorage.setItem("token", response.data.token);
                     localStorage.setItem(
                         "user",
                         JSON.stringify(response.data.user)

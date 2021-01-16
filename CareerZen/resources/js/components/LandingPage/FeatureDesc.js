@@ -11,10 +11,20 @@ function FeatureDesc() {
                     <h1>Feature and description</h1>
                     <div className="container">
                         <div className="lefthalf">
-                            <img
+                            <div
+                                style={{
+                                    backgroundImage:
+                                        "url(/Images/Aboutus.jpeg)",
+                                    height: "100%",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                    minHeight: 250
+                                }}
+                            ></div>
+                            {/* <img
                                 src="/Images/Aboutus.jpeg"
                                 alt="I am a Image"
-                            />
+                            /> */}
                         </div>
                         <div className="righthalf">
                             <p>

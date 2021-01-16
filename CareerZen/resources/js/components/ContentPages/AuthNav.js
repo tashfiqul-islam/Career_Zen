@@ -13,15 +13,19 @@ function AuthNav() {
     return (
         <>
             <IconContext.Provider value={{ color: "#fff" }}>
-                <div className="navbar">
-                    <Link to="#" className="menu-bars">
+                <div className="auth-navbar">
+                    <Link to="#" className="auth-menu-bars">
                         <FaIcons.FaBars onClick={showSidebar} />
                     </Link>
                 </div>
-                <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-                    <ul className="nav-menu-items" onClick={showSidebar}>
-                        <li className="navbar-toggle">
-                            <Link to="#" className="menu-bars">
+                <nav
+                    className={
+                        sidebar ? "auth-nav-menu active" : "auth-nav-menu"
+                    }
+                >
+                    <ul className="auth-nav-menu-items" onClick={showSidebar}>
+                        <li className="auth-navbar-toggle">
+                            <Link to="#" className="auth-menu-bars">
                                 <AiIcons.AiOutlineClose />
                             </Link>
                         </li>

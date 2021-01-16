@@ -34,7 +34,8 @@ const useGlobalState = () => {
                     }
                 };
                 const response = await axios.get(
-                    "http://127.0.0.1:8000/api/user",
+                    // "http://127.0.0.1:8000/api/user",
+                    "https://app.mycareerzen.tech/api/user",
                     config
                 );
                 setstate({
