@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Redirect } from "react-router-dom";
 import { Button } from "reactstrap";
-import axios from "axios";
+// import axios from "axios";
 // Auth imports
 // import Context from "../Store/Context";
 import UseAuth from "../Store/UseAuth";

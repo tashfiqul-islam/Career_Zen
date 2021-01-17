@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 const useGlobalState = () => {
     const [state, setstate] = useState({
-        id: null
+        id: null,
+        token: ""
     });
 
     const [isLoading, setLoading] = useState(true);
@@ -24,23 +25,30 @@ const useGlobalState = () => {
     // }, []);
 
     useEffect(() => {
-        // setLoading(true);
+        setLoading(true);
         async function fetchData() {
-            const token = localStorage.getItem("token");
-            if (typeof window !== undefined) {
-                const config = {
-                    headers: {
-                        Authorization: "Bearer " + token
-                    }
-                };
-                const response = await axios.get(
-                    "http://127.0.0.1:8000/api/user",
-                    config
-                );
-                setstate({
-                    id: response.data.id
-                });
-                console.log(state.id);
+            try {
+                const token = localStorage.getItem("token");
+                if (typeof window !== undefined) {
+                    const config = {
+                        headers: {
+                            Authorization: "Bearer " + token
+                        }
+                    };
+                    const response = await axios.get(
+                        "http://127.0.0.1:8000/api/user",
+                        // "http://app.mycareerzen.tech/api/user",
+                        config
+                    );
+                    setstate({
+                        id: response.data.id,
+                        token: token
+                    });
+                    console.log(state.id);
+                    setLoading(false);
+                }
+            } catch (err) {
+                console.log(err);
                 setLoading(false);
             }
         }

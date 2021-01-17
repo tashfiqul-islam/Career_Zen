@@ -54,6 +54,7 @@ const LoginForm = () => {
         try {
             const response = await axios.post(
                 "http://127.0.0.1:8000/api/login",
+                // "http://app.mycareerzen.tech/api/login",
                 user,
                 {
                     cancelToken: source.token
@@ -135,6 +136,7 @@ const LoginForm = () => {
         } catch (err) {
             // Handle Error Here
             console.error(err);
+            setIsLoading(false);
             // console.log(response.data);
         }
     };
@@ -172,10 +174,16 @@ const LoginForm = () => {
                                             });
                                         }}
                                     />
-                                    <span className="text-danger">{msg}</span>
-                                    <span className="text-danger">
-                                        {errorMessage.errMsgEmail}
-                                    </span>
+                                    {msg && (
+                                        <span className="text-danger">
+                                            {msg}
+                                        </span>
+                                    )}
+                                    {errorMessage.errMsgEmail && (
+                                        <span className="text-danger">
+                                            {errorMessage.errMsgEmail}
+                                        </span>
+                                    )}
                                 </div>
 
                                 <div className="form-group">
@@ -193,9 +201,11 @@ const LoginForm = () => {
                                             });
                                         }}
                                     />
-                                    <span className="text-danger">
-                                        {errorMessage.errMsgPwd}
-                                    </span>
+                                    {errorMessage.errMsgPwd && (
+                                        <span className="text-danger">
+                                            {errorMessage.errMsgPwd}
+                                        </span>
+                                    )}
                                 </div>
 
                                 <div className="form-group">
@@ -217,9 +227,12 @@ const LoginForm = () => {
                                         </label>
                                     </div>
                                 </div>
-                                <p className="text-danger">
-                                    {errorMessage.errMsg}
-                                </p>
+
+                                {errorMessage.errMsg && (
+                                    <span className="text-danger">
+                                        {errorMessage.errMsg}
+                                    </span>
+                                )}
                                 <button
                                     type="submit"
                                     className="btn btn-primary btn-block"
@@ -227,14 +240,13 @@ const LoginForm = () => {
                                         HandleFormSubmit(e);
                                     }}
                                 >
-                                    Sign in
                                     {isLoading ? (
                                         <Spinner color="secondary" />
                                     ) : (
-                                        <span></span>
+                                        "Sign in"
                                     )}
                                 </button>
-                                <p className="forgot-password text-right">
+                                <p className="forgot-password text-center">
                                     Forgot <a href="#">password?</a>
                                 </p>
                             </form>
