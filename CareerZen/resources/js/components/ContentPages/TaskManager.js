@@ -90,8 +90,10 @@ const TaskManager = props => {
     useEffect(() => {
         settoken(state.token);
         try {
+            // "http://app.mycareerzen.tech/api/login"
+            // "http://127.0.0.1:8000/api/todo"
             axios
-                .get("http://127.0.0.1:8000/api/todo", {
+                .get("http://app.mycareerzen.tech/api/todo", {
                     headers: {
                         Authorization: "Bearer " + state.token
                     }
@@ -120,7 +122,8 @@ const TaskManager = props => {
             // const token = state.token;
 
             const response = await axios.post(
-                "http://127.0.0.1:8000/api/todo",
+                "http://app.mycareerzen.tech/api/todo",
+                // "http://127.0.0.1:8000/api/todo",
                 task,
                 {
                     headers: {
@@ -145,11 +148,16 @@ const TaskManager = props => {
     const editTask = async (e, id) => {
         e.preventDefault();
         try {
-            const response = await axios.get("http://127.0.0.1:8000/api/todo", {
-                headers: {
-                    Authorization: "Bearer " + token
+            // http://app.mycareerzen.tech/api/todo
+            // http://127.0.0.1:8000/api/todo
+            const response = await axios.get(
+                "http://app.mycareerzen.tech/api/todo",
+                {
+                    headers: {
+                        Authorization: "Bearer " + token
+                    }
                 }
-            });
+            );
 
             console.log(response);
         } catch (e) {
