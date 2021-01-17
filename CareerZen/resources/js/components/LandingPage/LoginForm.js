@@ -53,8 +53,8 @@ const LoginForm = () => {
 
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/api/login",
-                // "http://app.mycareerzen.tech/api/login",
+                // "http://127.0.0.1:8000/api/login",
+                "http://app.mycareerzen.tech/api/login",
                 user,
                 {
                     cancelToken: source.token

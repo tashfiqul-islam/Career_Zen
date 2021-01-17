@@ -36,10 +36,10 @@ const Signup = props => {
             const data = newUser;
             console.log(data);
 
-            // https://app.mycareerzen.tech
+            // http://app.mycareerzen.tech
             // http://127.0.0.1:8000/
             axios
-                .post("http://127.0.0.1:8000/api/register", newUser)
+                .post("http://app.mycareerzen.tech/api/register", newUser)
                 .then(response => {
                     setLoading(false);
                     if (response.data.status === 200) {
