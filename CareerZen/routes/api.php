@@ -19,7 +19,9 @@ Route::post('register', [App\Http\Controllers\AuthController::class, 'register']
 Route::post('login' , [App\Http\Controllers\AuthController::class, 'login']);
 Route::get('user', [App\Http\Controllers\AuthController::class, 'userDetail'])->middleware('auth:api');
 
+// Route::post('todo', [App\Http\Controllers\TodoController::class, 'store']);
+// Route::get('todoAll', [App\Http\Controllers\TodoController::class, 'index'])->middleware('auth:api');
+Route::resource('todo', App\Http\Controllers\TodoController::class)->middleware('auth:api');
+// ->middleware('auth:api');
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+

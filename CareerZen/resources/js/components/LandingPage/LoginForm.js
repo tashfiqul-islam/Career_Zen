@@ -54,7 +54,7 @@ const LoginForm = () => {
         try {
             const response = await axios.post(
                 "http://127.0.0.1:8000/api/login",
-                // "https://app.mycareerzen.tech/api/login",
+                // "http://app.mycareerzen.tech/api/login",
                 user,
                 {
                     cancelToken: source.token
@@ -227,9 +227,12 @@ const LoginForm = () => {
                                         </label>
                                     </div>
                                 </div>
-                                <p className="text-danger">
-                                    {errorMessage.errMsg}
-                                </p>
+
+                                {errorMessage.errMsg && (
+                                    <span className="text-danger">
+                                        {errorMessage.errMsg}
+                                    </span>
+                                )}
                                 <button
                                     type="submit"
                                     className="btn btn-primary btn-block"

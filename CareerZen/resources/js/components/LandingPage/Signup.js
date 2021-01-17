@@ -31,44 +31,51 @@ const Signup = props => {
     const HandleFormSubmit = e => {
         e.preventDefault();
         setLoading(true);
-        const data = newUser;
-        console.log(data);
-        // https://app.mycareerzen.tech
-        // http://127.0.0.1:8000/
-        axios
-            .post("http://127.0.0.1:8000/api/register", newUser)
-            .then(response => {
-                setLoading(false);
-                if (response.data.status === 200) {
-                    console.log(response);
-                    // localStorage.setItem("token", response.data.token);
-                    localStorage.setItem(
-                        "user",
-                        JSON.stringify(response.data.user)
-                    );
-                    // console.log(response.data.user.id);
-                    setMsg(response.data.message);
 
-                    setNewUser({
-                        name: "",
-                        email: "",
-                        password: ""
-                    });
-                    toggle();
-                    setTimeout(() => {
-                        setMsg("");
-                    }, 2000);
-                }
+        try {
+            const data = newUser;
+            console.log(data);
 
-                if (response.data.status === "failed") {
-                    setMsg(response.data.errors);
-                    console.log(msg);
+            // https://app.mycareerzen.tech
+            // http://127.0.0.1:8000/
+            axios
+                .post("http://127.0.0.1:8000/api/register", newUser)
+                .then(response => {
+                    setLoading(false);
+                    if (response.data.status === 200) {
+                        console.log(response);
+                        // localStorage.setItem("token", response.data.token);
+                        localStorage.setItem(
+                            "user",
+                            JSON.stringify(response.data.user)
+                        );
+                        // console.log(response.data.user.id);
+                        setMsg(response.data.message);
 
-                    setTimeout(() => {
-                        setMsg("");
-                    }, 2000);
-                }
-            });
+                        setNewUser({
+                            name: "",
+                            email: "",
+                            password: ""
+                        });
+                        toggle();
+                        setTimeout(() => {
+                            setMsg("");
+                        }, 2000);
+                    }
+
+                    if (response.data.status === "failed") {
+                        setMsg(response.data.errors);
+                        console.log(msg);
+
+                        setTimeout(() => {
+                            setMsg("");
+                        }, 2000);
+                    }
+                });
+        } catch (err) {
+            console.log(err);
+            setLoading(false);
+        }
     };
 
     // // Check if login/Register token is there
@@ -101,7 +108,13 @@ const Signup = props => {
                                             });
                                         }}
                                     />
+                                    {msg.name && (
+                                        <span className="text-danger">
+                                            {msg.name}
+                                        </span>
+                                    )}
                                 </div>
+                                {/* <p className="text-danger">{msg.name}</p> */}
 
                                 {/* <div className="form-group">
                                     <label>Last name</label>
@@ -135,7 +148,13 @@ const Signup = props => {
                                             });
                                         }}
                                     />
+                                    {msg.email && (
+                                        <span className="text-danger text-center">
+                                            {msg.email}
+                                        </span>
+                                    )}
                                 </div>
+                                {/* <p className="text-danger">{msg.email}</p> */}
 
                                 <div className="form-group">
                                     <label>Password</label>
@@ -152,11 +171,15 @@ const Signup = props => {
                                             });
                                         }}
                                     />
+                                    {msg.password && (
+                                        <span className="text-danger">
+                                            {msg.password}
+                                        </span>
+                                    )}
                                 </div>
                                 {/* <p className="text-danger">{msg}</p> */}
-                                <p className="text-danger">{msg.name}</p>
-                                <p className="text-danger">{msg.email}</p>
-                                <p className="text-danger">{msg.password}</p>
+
+                                {/* <p className="text-danger">{msg.password}</p> */}
 
                                 {/* <Spinner color="primary" /> */}
                                 <button
@@ -166,11 +189,10 @@ const Signup = props => {
                                         HandleFormSubmit(e);
                                     }}
                                 >
-                                    Sign Up
                                     {isLoading ? (
                                         <Spinner color="secondary" />
                                     ) : (
-                                        <span></span>
+                                        "Sign Up"
                                     )}
                                 </button>
                                 <Modal
@@ -193,7 +215,7 @@ const Signup = props => {
                                         </Button>
                                     </ModalFooter>
                                 </Modal>
-                                <p className="forgot-password text-right">
+                                <p className="forgot-password text-center">
                                     Already registered{" "}
                                     <HashLink to="/#login" smooth={true}>
                                         Login ?

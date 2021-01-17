@@ -5,11 +5,30 @@ import { Link } from "react-router-dom";
 import { SideBarData } from "./SideBarData";
 import "../../../css/AuthNav.css";
 import { IconContext } from "react-icons";
+import UseAuth from "../Store/UseAuth";
 
 function AuthNav() {
+    const { state, actions } = UseAuth();
+
     const [sidebar, setSidebar] = useState(false);
 
     const showSidebar = () => setSidebar(!sidebar);
+
+    const onLogoutHandler = e => {
+        e.preventDefault();
+        console.log("auth state");
+        console.log(state);
+        actions({
+            type: "logout",
+            payload: {
+                isLoggedIn: false,
+                token: null
+            }
+        });
+
+        localStorage.clear();
+        // setNavigate(true);
+    };
     return (
         <>
             <IconContext.Provider value={{ color: "#fff" }}>
@@ -39,6 +58,9 @@ function AuthNav() {
                                 </li>
                             );
                         })}
+                        <li className="btn" onClick={onLogoutHandler}>
+                            Logout
+                        </li>
                     </ul>
                 </nav>
             </IconContext.Provider>
